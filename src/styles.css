@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-main : #11181F;
+    --clr-dark : #0E1419;
+    --clr-accent : #5168E5;
+    --clr-grey : #D2E8FF;
+}
+
+@font-face {
+    font-family: Kanit;
+    src: url(./assets/fonts/Kanit-Regular.ttf);
+}
+
+body {
+    background-color: var(--clr-main);
+    font-family: Kanit;
+}

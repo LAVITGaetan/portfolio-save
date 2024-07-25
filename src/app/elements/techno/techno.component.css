@@ -1,0 +1,71 @@
+.techno {
+    width: 100%;
+    background: rgb(17,19,23);
+    background: linear-gradient(360deg, rgba(17,19,23,1) 0%, rgba(17,24,31,1) 100%);
+    padding: 24px 12%;
+}
+
+.techno-title {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    padding: 24px;
+    color: white;
+    letter-spacing: 0.05em;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.techno-title:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 100px;
+}
+
+.techno-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 32px;
+}
+
+.techno-item {
+    width: fit-content;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+    margin-bottom: 24px;
+}
+
+.item-figure {
+    width: 64px;
+    height: 64px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--clr-main);
+    border-bottom: 2px solid var(--clr-accent);
+    transition: .3s ease;
+}
+
+.techno-item:hover .item-figure {
+    border: 2px solid var(--clr-accent);
+
+}
+
+.item-name {
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+}
