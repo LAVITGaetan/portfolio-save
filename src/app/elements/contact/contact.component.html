@@ -1,10 +1,39 @@
-<div class="contact-form">
-    <div class="contact-form-title">
-        <form>
-            <div class="form-group">
-                <label for="" class="form-label"></label>
-                <input type="text" placeholder="">
+<div id="contact" class="contact">
+    <div class="contact-form">
+        <h2 class="contact-title">Formulaire de contact</h2>
+        <form novalidate="" class="form ng-pristine ng-invalid ng-touched">
+            <div class="form-group"><label class="form-label">Nom et Prénom</label><input name="fullname" type="text"
+                    formcontrolname="fullname" class="form-input ng-untouched ng-pristine ng-invalid"></div>
+            <div class="form-group"><label class="form-label">Votre email</label><input name="email" type="text"
+                    formcontrolname="email" class="form-input ng-untouched ng-pristine ng-invalid"></div>
+            <div class="form-group"><label class="form-label">Objet</label><input name="object" type="text"
+                    formcontrolname="object" class="form-input ng-untouched ng-pristine ng-invalid"></div>
+            <div class="form-group"><label class="form-label">Votre message</label><textarea name="message"
+                    formcontrolname="message" class="form-area ng-pristine ng-invalid invalid ng-touched"
+                    style="width: 403px; height: 125px;"></textarea><span class="error-message">Champ obligatoire</span>
             </div>
+            <div class="form-group"><button class="form-action disabled" disabled="">Envoyer</button></div>
         </form>
+    </div>
+    <div class="contact-about">
+        <div class="about-row">
+            <div class="icon-container"><img width="20px" height="20px" src="./assets/frontend/icon-location.svg"
+                    alt="adresse" class="about-icon"></div>
+            Saint-Pierre, Ligne-Paradis 97410
+        </div>
+        <div class="about-row">
+            <div class="icon-container"><img width="20px" height="20px" src="./assets/frontend/icon-email.svg"
+                    alt="email" class="about-icon"></div>
+            g.lavit@gmail.com
+        </div>
+        <div class="about-row">
+            <div class="icon-container"><img width="20px" height="20px" src="./assets/frontend/icon-phone.svg"
+                    alt="phone" class="about-icon"></div>06 93 83
+            28 21
+        </div><a href="https://www.linkedin.com/in/gaetan-lavit-d-hautefort-6231241b8/" class="about-row">
+            <div class="icon-container"><img width="20px" height="20px" src="./assets/frontend/icon-linkedin.svg"
+                    alt="linkedin" class="about-icon"></div>
+            LinkedIn
+        </a>
     </div>
 </div>

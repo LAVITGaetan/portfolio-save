@@ -7,4 +7,22 @@
     align-items: center;
     border-bottom: 2px solid var(--clr-dark);
     padding: 0 12%;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: navbarSlideIn 1s ease-out forwards;
+}
+
+@keyframes navbarSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar-menu {
+    cursor: pointer;
 }

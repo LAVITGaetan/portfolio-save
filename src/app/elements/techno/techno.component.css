@@ -1,8 +1,16 @@
 .techno {
     width: 100%;
-    background: rgb(17,19,23);
-    background: linear-gradient(360deg, rgba(17,19,23,1) 0%, rgba(17,24,31,1) 100%);
-    padding: 24px 12%;
+    background: var(--clr-dark);
+    padding: 48px 12%;
+    opacity: 0;
+    animation: technoFadeIn 1.5s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes technoFadeIn {
+    100% {
+        opacity: 1;
+    }
 }
 
 .techno-title {
@@ -12,7 +20,7 @@
     width: fit-content;
     margin: auto;
     padding: 24px;
-    color: white;
+    color: var(--clr-text);
     letter-spacing: 0.05em;
     position: relative;
     margin-bottom: 12px;
@@ -28,13 +36,6 @@
     border-radius: 100px;
 }
 
-.techno-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    column-gap: 32px;
-}
-
 .techno-item {
     width: fit-content;
     cursor: pointer;
@@ -42,7 +43,9 @@
     flex-direction: column;
     align-items: center;
     row-gap: 8px;
-    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInUp 2s ease forwards;
 }
 
 .item-figure {
@@ -52,19 +55,61 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--clr-main);
-    border-bottom: 2px solid var(--clr-accent);
-    transition: .3s ease;
+    border: 2px solid transparent;
+    background-color: var(--clr-main);
+    border-radius: 64px;
+    transition: .5s;
 }
 
-.techno-item:hover .item-figure {
+.item-figure:hover {
     border: 2px solid var(--clr-accent);
+}
 
+.item-0 {
+    animation-delay: 2.5s;
+}
+
+.item-1 {
+    animation-delay: 3s;
+}
+
+.item-2 {
+    animation-delay: 3.5s;
+}
+
+.item-3 {
+    animation-delay: 4s;
+}
+
+.item-4 {
+    animation-delay: 4.5s;
+}
+
+.item-5 {
+    animation-delay: 5s;
+}
+
+.item-6 {
+    animation-delay: 5.5s;
+}
+
+.item-7 {
+    animation-delay: 6s;
+}
+
+@keyframes fadeInUp {
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .item-name {
     text-align: center;
-    color: white;
+    color: var(--clr-text);
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.03em;

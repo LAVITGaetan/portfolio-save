@@ -9,6 +9,8 @@ import { HeroComponent } from './elements/hero/hero.component';
 import { TechnoComponent } from './elements/techno/techno.component';
 import { ProjectListComponent } from './elements/project-list/project-list.component';
 import { ContactComponent } from './contact/contact.component';
+import { MenuComponent } from './elements/menu/menu.component';
+import { FooterComponent } from './elements/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ContactComponent } from './contact/contact.component';
     HeroComponent,
     TechnoComponent,
     ProjectListComponent,
-    ContactComponent
+    ContactComponent,
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+.footer {
+    width: 100%;
+    padding: 24px 12%;
+    text-align: center;
+    color: var(--clr-text);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    background-color: var(--clr-accent);
+    margin-top: 48px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: footerSlideIn 1s ease forwards;
+    animation-delay: 8s; 
+    font-style: italic;
+}
+
+@keyframes footerSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

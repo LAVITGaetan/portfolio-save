@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  swapTheme() {
+    document.body.classList.toggle("light")
+    document.getElementById("dark")?.classList.toggle("hidden")
+    document.getElementById("light")?.classList.toggle("hidden")
+  }
 }
