@@ -3,8 +3,8 @@
     background: var(--clr-dark);
     padding: 48px 12%;
     opacity: 0;
-    animation: technoFadeIn 1.5s ease forwards;
-    animation-delay: 2s;
+    animation: technoFadeIn 1s ease forwards;
+    animation-delay: 1s;
 }
 
 @keyframes technoFadeIn {
@@ -45,7 +45,7 @@
     row-gap: 8px;
     opacity: 0;
     transform: translateY(100px);
-    animation: fadeInUp 2s ease forwards;
+    animation: fadeInUp 1s ease forwards;
 }
 
 .item-figure {
@@ -66,35 +66,35 @@
 }
 
 .item-0 {
-    animation-delay: 2.5s;
+    animation-delay: 1.5s;
 }
 
 .item-1 {
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 .item-2 {
-    animation-delay: 3.5s;
+    animation-delay: 2.5s;
 }
 
 .item-3 {
-    animation-delay: 4s;
+    animation-delay: 3s;
 }
 
 .item-4 {
-    animation-delay: 4.5s;
+    animation-delay: 3.5s;
 }
 
 .item-5 {
-    animation-delay: 5s;
+    animation-delay: 4s;
 }
 
 .item-6 {
-    animation-delay: 5.5s;
+    animation-delay: 4.5s;
 }
 
 .item-7 {
-    animation-delay: 6s;
+    animation-delay: 5s;
 }
 
 @keyframes fadeInUp {

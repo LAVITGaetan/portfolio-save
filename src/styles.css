@@ -8,6 +8,8 @@
     --clr-main: #11181F;
     --clr-dark: #0E1419;
     --clr-accent: #5168E5;
+    --clr-action-text: #fff;
+    --clr-action-background: #0E1419;
     --clr-grey: #D2E8FF;
     --clr-text : #fff;
     --clr-accent-shadow : #5167e534;
@@ -24,9 +26,11 @@ body {
 }
 
 body.light {
-    --clr-main: #fbfbfe ;
-    --clr-dark: #fff;
-    --clr-accent: #74a5ff;
+    --clr-main: #fff ;
+    --clr-dark: hsl(231, 74%, 98%);
+    --clr-accent: #5168E5;
+    --clr-action-text: #fff;
+    --clr-action-background: #5168E5;
     --clr-grey: #0E1419;
     --clr-text : #0E1419;
     --clr-accent-shadow : #5167e5c6;
@@ -54,9 +58,9 @@ body.light {
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.03em;
-    color: var(--clr-text);
+    color: var(--clr-action-text);
     padding: 12px 16px;
-    background-color: var(--clr-dark);
+    background-color: var(--clr-action-background);
     border: 2px solid var(--clr-accent);
     outline: none;
     font-family: Kanit;
