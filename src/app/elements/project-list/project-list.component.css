@@ -85,3 +85,10 @@ padding: 12px 12%;
     background-position: center;
     background-size: contain;
 }
+
+
+#thumbnail-tic-tac-toe {
+    background-image: url(../../../assets/img/thumbnail-tic-tac-toe.png);
+    background-position: center;
+    background-size: contain;
+}
