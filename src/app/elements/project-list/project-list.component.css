@@ -92,3 +92,10 @@ padding: 12px 12%;
     background-position: center;
     background-size: contain;
 }
+
+
+#thumbnail-sushi {
+    background-image: url(../../../assets/img/thumbnail-sushi.png);
+    background-position: center;
+    background-size: contain;
+}
