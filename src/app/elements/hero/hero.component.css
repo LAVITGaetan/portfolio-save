@@ -49,6 +49,14 @@
     background-image: url(../../../assets/img/hero-bg-3.webp);
 }
 
+.hero-bg1, .hero-bg2, .hero-bg3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 4px solid var(--clr-dark);
+    border-radius: 4px;
+    transition: .3s ease-in-out;
+}
 @media screen and (max-width: 1400px) {
 
 
@@ -61,13 +69,20 @@
         display: none;
     }
 
-    .hero-bg2 {
+    .hero-bg3 {
         display: none;
     }
+
+    .hero-bg2 {
+        grid-area: 1 / 3 / 7 / 5;
+    background-image: url(../../../assets/img/3d.png);
+    border: none;
+    background-size: contain;
+}
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
 
 
     .hero-left {
@@ -75,23 +90,29 @@
         padding: 32px 32px 32px 0;
     }
 
-
-    .hero-bg3 {
+    .hero-bg2 {
         display: none;
     }
 }
 
-.hero-bg1, .hero-bg2, .hero-bg3 {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 4px solid var(--clr-dark);
-    transition: .3s ease-in-out;
-    filter: blur(.5px);
+
+
+@media screen and (max-width: 850px) {
+    .hero {
+
+        padding: 24px;
+
+    
+    }
+    
+
+    .hero-title {
+        font-size: 25px;
+        margin-bottom: 16px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
 }
 
-.hero-bg1:hover, .hero-bg2:hover, .hero-bg3:hover {
-    border: 4px solid var(--clr-accent);
-    filter: blur(0);
-    cursor: pointer;
-}
