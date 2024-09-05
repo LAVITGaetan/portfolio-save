@@ -11,7 +11,7 @@
     opacity: 0;
     transform: translateY(50px);
     animation: footerSlideIn 1s ease forwards;
-    animation-delay: 7s; 
+    animation-delay: 3s; 
     font-style: italic;
     display: flex;
     align-items: center;
