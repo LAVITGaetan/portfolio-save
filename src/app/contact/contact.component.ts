@@ -15,11 +15,26 @@ export class ContactComponent {
     message : new FormControl('', [Validators.required, Validators.minLength(6)]),
   })
 
-  submitForm() {
+  submitForm(e: Event) {
+    e.preventDefault();
     alert('submitted')
     console.log(this.contactForm.get('email')?.value);
     console.log(this.contactForm.get('object')?.value);
     console.log(this.contactForm.get('message')?.value);
+
+    console.log(e.target as HTMLFormElement);
     
+    emailjs
+      .sendForm('service_k1ldti7', 'template_vctb17y', e.target as HTMLFormElement, {
+        publicKey: 'tI_GYCmxxx1ocbTk6',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', (error as EmailJSResponseStatus).text);
+        },
+      );
   }
 }

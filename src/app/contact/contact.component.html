@@ -1,19 +1,19 @@
 <div class="contact">
     <div class="contact-left">
-        <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submitForm($event)">
             <div class='form-group'>
                 <label class='form-label' for="email">Email</label>
-                <input [class.invalid]="!contactForm.get('email')?.valid && contactForm.get('email')?.touched" type='text' class='form-input' id="email" formControlName="email">
+                <input [class.invalid]="!contactForm.get('email')?.valid && contactForm.get('email')?.touched" type='text' class='form-input' id="email" name="email" formControlName="email">
                 <div *ngIf="!contactForm.get('email')?.valid && contactForm.get('email')?.touched" class="input-error"><img src="./assets/img/icon-warning.png" width="24px" height="24px" alt="warning"><span class="warning-text">Ce champ est obligatoire</span></div>
             </div>
             <div class='form-group'>
                 <label class='form-label' for="object">Objet</label>
-                <input [class.invalid]="!contactForm.get('object')?.valid && contactForm.get('object')?.touched" type='text' class='form-input' id="object" formControlName="object">
+                <input [class.invalid]="!contactForm.get('object')?.valid && contactForm.get('object')?.touched" type='text' class='form-input' id="object" name="object" formControlName="object">
                 <div *ngIf="!contactForm.get('object')?.valid && contactForm.get('object')?.touched" class="input-error"><img src="./assets/img/icon-warning.png" width="24px" height="24px" alt="warning"><span class="warning-text">Ce champ est obligatoire</span></div>
             </div>
             <div class='form-group'>
                 <label class='form-label' for="message">Message</label>
-                <textarea [class.invalid]="!contactForm.get('message')?.valid && contactForm.get('message')?.touched" class="form-area" id="message" formControlName="message"></textarea>
+                <textarea [class.invalid]="!contactForm.get('message')?.valid && contactForm.get('message')?.touched" class="form-area" id="message" name="message" formControlName="message"></textarea>
                 <div *ngIf="!contactForm.get('message')?.valid && contactForm.get('message')?.touched" class="input-error"><img src="./assets/img/icon-warning.png" width="24px" height="24px" alt="warning"><span class="warning-text">Ce champ est obligatoire</span></div>
             </div>
             <button [disabled]="!contactForm.valid" [class.disabled]="!contactForm.valid" class="form-action action">
