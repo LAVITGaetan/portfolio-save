@@ -19,7 +19,9 @@
             <button [disabled]="!contactForm.valid" [class.disabled]="!contactForm.valid" class="form-action action">
                 <div class="action-design"></div><span class="action-text">Envoyer</span>
             </button>
-
+            <div class="loading" *ngIf="isLoading"><img class="loading-icon" src="./assets/img/icon-loading.png" width="24px" height="24px" alt="chargement"><span class="loading-text">Envoi en cours</span></div>
+            <div class="result" *ngIf="formResult === 'success'"><img src="./assets/img/icon-success.png" width="24px" height="24px" alt="success"><span class="result-text">Message envoyé avec succès</span></div>
+            <div class="result" *ngIf="formResult === 'error'"><img src="./assets/img/icon-warning.png" width="24px" height="24px" alt="success"><span class="result-text">Erreur lors de l'envoi</span></div>
         </form>
     </div>
     <div class="contact-right">

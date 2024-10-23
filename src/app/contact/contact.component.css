@@ -98,3 +98,28 @@
 .disabled {
     opacity: .5;
 }
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading, .result {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.loading-icon {
+    animation: rotate 2s infinite linear; 
+}
+
+.loading-text, .result-text {
+    font-size: 16px;
+    color: var(--clr-text);
+    padding-left: 6px;
+}
