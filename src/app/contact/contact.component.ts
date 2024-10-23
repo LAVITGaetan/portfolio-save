@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { environment } from 'src/environment/environment';
 
 @Component({
   selector: 'app-contact',
@@ -17,16 +18,9 @@ export class ContactComponent {
 
   submitForm(e: Event) {
     e.preventDefault();
-    alert('submitted')
-    console.log(this.contactForm.get('email')?.value);
-    console.log(this.contactForm.get('object')?.value);
-    console.log(this.contactForm.get('message')?.value);
-
-    console.log(e.target as HTMLFormElement);
-    
     emailjs
-      .sendForm('service_k1ldti7', 'template_vctb17y', e.target as HTMLFormElement, {
-        publicKey: 'tI_GYCmxxx1ocbTk6',
+      .sendForm(environment.emailJsServiceId, environment.emailJsTemplateId, e.target as HTMLFormElement, {
+        publicKey: environment.emailJsPublicKey,
       })
       .then(
         () => {
