@@ -12,6 +12,8 @@ import { ContactComponent } from './contact/contact.component';
 import { MenuComponent } from './elements/menu/menu.component';
 import { FooterComponent } from './elements/footer/footer.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { FooterComponent } from './elements/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
